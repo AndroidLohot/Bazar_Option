@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +45,7 @@ public class Bazar_Home extends Fragment {
         // Adding data spinner
         arrayList=new ArrayList<>();
 
+        arrayList.add("Select yure opetion");
         arrayList.add("Gehu");
         arrayList.add("Bajary");
         arrayList.add("Methi");
@@ -71,7 +74,24 @@ public class Bazar_Home extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+            switch (valPosition)
+            {
+                case 0:
+                    Toast.makeText(getContext(),"PLZ select yure opetion",Toast.LENGTH_LONG).show();
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
 
             }
         });
@@ -80,10 +100,36 @@ public class Bazar_Home extends Fragment {
         btnSale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"This is sale",Toast.LENGTH_LONG).show();
+
+                switch (valPosition)
+                {
+                    case 0:
+                        Toast.makeText(getContext(),"PLZ select yure opetion",Toast.LENGTH_LONG).show();
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                }
             }
         });
 
         return view;
+    }
+
+    private void fragment_Choice(Fragment fragment)
+    {
+        FragmentManager fm=getActivity().getSupportFragmentManager();
+        FragmentTransaction ft=fm.beginTransaction();
+        ft.replace(R.id.fragmentCon,fragment);
+        ft.commit();
     }
 }
