@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.bajaropetion.AdapterHome.MyAdapter;
 import com.example.bajaropetion.R;
 
 import java.util.ArrayList;
@@ -74,24 +75,25 @@ public class Bazar_Home extends Fragment {
             @Override
             public void onClick(View v) {
 
-            switch (valPosition)
-            {
-                case 0:
-                    Toast.makeText(getContext(),"PLZ select yure opetion",Toast.LENGTH_LONG).show();
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-            }
+          fragment_Choice(new ShowList());
+          // switch (valPosition)
+          // {
+          //     case 0:
+          //         Toast.makeText(getContext(),"PLZ select yure opetion",Toast.LENGTH_LONG).show();
+          //         break;
+          //     case 1:
+          //         break;
+          //     case 2:
+          //         break;
+          //     case 3:
+          //         break;
+          //     case 4:
+          //         break;
+          //     case 5:
+          //         break;
+          //     case 6:
+          //         break;
+          // }
 
             }
         });
@@ -125,6 +127,7 @@ public class Bazar_Home extends Fragment {
         return view;
     }
 
+    // Create frament choice function
     private void fragment_Choice(Fragment fragment)
     {
         FragmentManager fm=getActivity().getSupportFragmentManager();
